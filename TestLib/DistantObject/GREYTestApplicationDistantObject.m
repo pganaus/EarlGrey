@@ -35,6 +35,8 @@
 #import "EDOServicePort.h"
 #import "NSObject+EDOBlockedType.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-but-set-variable"
 
 /** Checks if main queue has eDO host service. */
 static BOOL IsEDOServiceHostedOnMainQueue(void) {
@@ -361,3 +363,5 @@ static dispatch_time_t AllocationWaitTime() {
 }
 
 @end
+
+#pragma clang diagnostic pop

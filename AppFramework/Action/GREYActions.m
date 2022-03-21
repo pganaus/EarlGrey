@@ -56,6 +56,9 @@
 #import "GREYScreenshotter.h"
 #import "EDORemoteVariable.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-but-set-variable"
+
 static Class gAccessibilityTextFieldElementClass;
 static SEL gTextSelector;
 static SEL gBeginningOfDocumentSelector;
@@ -720,3 +723,5 @@ static Protocol *gTextInputProtocol;
 }
 
 @end
+
+#pragma clang diagnostic pop

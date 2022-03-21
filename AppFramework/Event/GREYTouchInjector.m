@@ -26,6 +26,9 @@
 #import "GREYThrowDefines.h"
 #import "GREYTouchInfo.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-but-set-variable"
+
 /**
  * The time interval in seconds between each touch injection.
  */
@@ -349,3 +352,5 @@ static inline void SetTouchFlagPropertyInUITouch(UITouch *touch) {
 }
 
 @end
+
+#pragma clang diagnostic pop

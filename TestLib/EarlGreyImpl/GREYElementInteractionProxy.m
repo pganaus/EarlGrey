@@ -25,6 +25,9 @@
 #import "GREYElementInteractionErrorHandler.h"
 #import "GREYRemoteExecutor.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-but-set-variable"
+
 @implementation GREYElementInteractionProxy {
   /** App-side interaction instance. */
   GREYElementInteraction *_remoteElementInteraction;
@@ -130,3 +133,5 @@
 }
 
 @end
+
+#pragma clang diagnostic pop
