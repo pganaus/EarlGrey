@@ -271,9 +271,6 @@ static BOOL RouteURLInApp(NSURL *targetURL, double timeoutInSeconds) {
   if ([delegate respondsToSelector:@selector(application:openURL:options:)]) {
     return [delegate application:app openURL:targetURL options:@{}];
   }
-  if ([delegate respondsToSelector:@selector(application:openURL:sourceApplication:annotation:)]) {
-    return [delegate application:app openURL:targetURL sourceApplication:nil annotation:@{}];
-  }
 
   // Step D: Fallback to system openURL if neither scene nor app delegates handle custom URLs.
   // Synchronized using GREYCondition on the caller thread to prevent blocking eDO's appProxyQueue.
